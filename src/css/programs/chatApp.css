@@ -1,0 +1,77 @@
+.window-icon {
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin-bottom: 100px;
+  background-image: url('../../img/chat.gif');
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+}
+
+/* For the window size */
+.content-div {
+  width: 400px;
+  height: 380px;
+  max-height: 420px;
+  background: #c3c3c3;
+  border-radius: 5px;
+}
+
+/* Chat app styles */
+.chatAppContainer {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#chat-window {
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 250px;
+  overflow-y: scroll;
+  background-color: #f1f1f1;
+}
+
+.message-container {
+  border-top: solid;
+}
+
+/* Message sent from random */
+.messageUser {
+  color: red;
+}
+
+/* Message from yourself */
+.messageSelf {
+  color: green;
+}
+
+
+#message-form form {
+  display: flex;
+}
+
+#messageBox {
+  padding-right: 175px;
+}
+
+#infobar {
+  font-size: 12px;
+}
+
+.messageTime {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.messageText {
+  border: dotted;
+}
+
+#answerInput {
+  text-align: center;
+}
+
+#startQuiz {
+  text-align: center;
+}

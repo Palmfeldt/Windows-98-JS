@@ -1,0 +1,143 @@
+/* This is the style file for the start site */
+
+/* Font import from the src folder */
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/ms_sans_serif.woff) format("woff");
+  src: url(../font/ms_sans_serif.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/ms_sans_serif_bold.woff) format("woff");
+  src: url(../font/ms_sans_serif_bold.woff2) format("woff2");
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+main {
+  position: relative;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Pixelated MS Sans Serif", Arial;
+
+  /* Used to remove aliasing */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #008080;
+  padding: 0%;
+  margin: 0%;
+
+  /* Disables text highlighting */
+  user-select: none;
+  -webkit-user-select: none;
+
+  /* Safari */
+  -moz-user-select: none;
+
+  /* Firefox */
+}
+
+.desktopProgram {
+  position: fixed;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* The positions of all the icons */
+
+#memoryGame {
+  left: 17px;
+  top: 170px;
+}
+
+#computerApp {
+  left: 17px;
+  top: 250px;
+}
+
+#chatApp {
+  left: 27px;
+  top: 100px;
+}
+
+#quizApp {
+  left: 120px;
+  top: 15px;
+}
+
+#recycleApp {
+  left: 25px;
+  top: 15px;
+}
+
+.highlightedProgram {
+  outline-color: rgba(255, 255, 255, 0.8);
+  background: #0090e4;
+  color: #fff;
+  text-shadow: 0 0 transparent;
+}
+
+
+#textBetweenLogo {
+  padding-left: 2px;
+  font-size: 13px;
+}
+
+
+#menuBox {
+  margin-left: 4px;
+  margin-top: 3px;
+  position: fixed;
+
+  /* Taken from https://fjolt.com/article/css-windows-98 */
+  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+}
+
+#startMenu {
+  bottom: 0.1rem;
+  position: absolute;
+  background: #c0c0c0;
+  width: 100%;
+  min-height: 1.5rem;
+  z-index: 999;
+}
+
+#rightTray {
+  display: flex;
+  padding-left: 5px;
+  margin-right: 3px;
+  margin-top: 1px;
+  border-style: inset;
+  outline: 2px solid rgb(187, 184, 184);
+  border-width: 1px;
+  position: absolute;
+  right: 0;
+}
+
+#audioIcon {
+  width: 90%;
+  height: 90%;
+  margin-top: 2px;
+  margin-right: 20px;
+}
+
+#clockTime {
+  font-size: 14px;
+  margin-top: 3px;
+  margin-right: 15px;
+}
+
+
+/* Taken from https://fjolt.com/article/css-windows-98 */
+.windows-box-shadow {
+  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+}

@@ -1,0 +1,40 @@
+.hidden {
+  display: none !important;
+}
+
+.window-icon {
+  margin-bottom: 10px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/potato.png');
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+}
+
+/* For the window size */
+.content-div {
+  width: 500px;
+  height: 470px;
+  max-height: 500px;
+  background: #c3c3c3;
+  border-radius: 5px;
+}
+
+/* Add some styling for the game board */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  border: inset;
+  cursor: pointer;
+}
+
+.cardSelection {
+  border: dotted;
+}
