@@ -73,6 +73,7 @@ export class MemoryGame extends WindowBox {
     this.isTimed = false
     this.totalTime = 0
     this.interval = null
+    this._stopButton.style.display = 'none'
   }
 
   // check for global button presses
@@ -82,6 +83,7 @@ export class MemoryGame extends WindowBox {
     this._startButton.addEventListener('click', (e) => {
       this.isTimed = false
       // hide the radio elements
+      this._stopButton.style.display = 'block'
       radioButtons.style.display = 'none'
       this.tilesNumbers = this.shadowRoot.querySelector('input[name="game-Type"]:checked').value
       this.initGame(this.isTimed)
@@ -227,6 +229,7 @@ export class MemoryGame extends WindowBox {
     this.noOfGuesses = 0
     this.numberCounter.innerText = 'Number of guesses: 0'
     this.shadowRoot.getElementById('game-board').innerHTML = ''
+    this._stopButton.style.display = 'none'
     this.numberCounter.classList.add('hidden')
     this.timedCounter.classList.add('hidden')
     this._startButton.classList.remove('hidden')
