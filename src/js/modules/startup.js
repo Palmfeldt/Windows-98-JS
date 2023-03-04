@@ -37,6 +37,20 @@ export function loadWindowsBar() {
   const startWindow = document.createElement('div')
   startWindow.setAttribute('id', 'startWindow')
   startWindow.setAttribute('class', 'windows-box-shadow hidden')
+  // add shutdown icon to start window
+  const startWindowShutdown = document.createElement('div')
+  startWindowShutdown.setAttribute('id', 'startWindowShutdown')
+
+  const finaltest = `
+  <div id="startWindowShutdown">
+  <a href="/">
+  <img src="./img/shutdown.png" id="startWindowShutdownIcon" alt="shutdown-icon">
+            </a>
+  <figcaption id="startWindowShutdownDesc">Shut down...</figcaption>
+  </div>`
+
+ 
+  startWindow.innerHTML = finaltest
   document.getElementById("startMenu").parentNode.insertBefore(startWindow, document.getElementById("startMenu"))
 }
 
