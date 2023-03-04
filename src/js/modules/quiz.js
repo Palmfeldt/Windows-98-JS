@@ -174,6 +174,7 @@ export class QuizApp extends WindowBox {
    * @param {any} url Takes the start url of the quiz.
    */
   async startQuiz (url) {
+    this.totalTime = 0
     this.shadowRoot.getElementById('scoreboard').style.display = 'none'
     // just a preventative mesure to remove old scores
     this.shadowRoot.getElementById('scoreboard').innerHTML = ''
