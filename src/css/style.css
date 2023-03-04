@@ -42,8 +42,10 @@ body {
 
   /* Safari */
   -moz-user-select: none;
+}
 
-  /* Firefox */
+.hidden {
+  display: none !important;
 }
 
 .desktopProgram {
@@ -92,12 +94,10 @@ body {
   font-size: 13px;
 }
 
-
 #menuBox {
   margin-left: 4px;
   margin-top: 3px;
   position: fixed;
-
   /* Taken from https://fjolt.com/article/css-windows-98 */
   box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
 }
@@ -109,6 +109,16 @@ body {
   width: 100%;
   min-height: 1.5rem;
   z-index: 999;
+}
+
+#startWindow {
+  bottom: 1.8rem;
+  left: 0.3rem;
+  position: absolute;
+  background: #c0c0c0;
+  height: 300px;
+  width: 200px;
+  z-index: 1000;
 }
 
 #rightTray {

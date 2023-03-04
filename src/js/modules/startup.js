@@ -5,26 +5,15 @@ const programs = document.getElementById('programs')
  * Loads the start Menu
  */
 // TODO set start inside div to create border
-export function loadStartMenu () {
+export function loadWindowsBar() {
   const footer = document.createElement('footer')
   footer.setAttribute('id', 'startMenu')
   // Adds the shadow to the box
   footer.setAttribute('class', 'windows-box-shadow')
+  footer.innerHTML = `<div id="menuBox"><img src="./img/start.png" 
+  alt="logo" style="float: left;"><b id="textBetweenLogo">Start</b></div>`
 
   // Needed for the border between the text and image
-  const menuBox = document.createElement('div')
-  menuBox.setAttribute('id', 'menuBox')
-
-  const logo = document.createElement('img')
-  logo.setAttribute('src', './img/start.png')
-  logo.setAttribute('alt', 'logo')
-  logo.setAttribute('style', 'float: left;')
-  menuBox.appendChild(logo)
-  footer.appendChild(menuBox)
-  const footerText = document.createElement('b')
-  footerText.setAttribute('id', 'textBetweenLogo')
-  footerText.innerText = 'Start'
-  menuBox.appendChild(footerText)
 
   // adds the clock
   const audioIcon = document.createElement('img')
@@ -43,12 +32,18 @@ export function loadStartMenu () {
   footer.appendChild(rightTray)
   // Adding it to the mainpage
   mainPage.appendChild(footer)
+
+  // adding the start window
+  const startWindow = document.createElement('div')
+  startWindow.setAttribute('id', 'startWindow')
+  startWindow.setAttribute('class', 'windows-box-shadow hidden')
+  document.getElementById("startMenu").parentNode.insertBefore(startWindow,  document.getElementById("startMenu"))
 }
 
 /**
  * Gives the current time with correct minute presentation
  */
-export function clockWatch () {
+export function clockWatch() {
   const d = new Date()
   document.getElementById('clockTime').innerText = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes()
 }
@@ -57,7 +52,7 @@ export function clockWatch () {
  * This is the start icon for the window
  */
 // this can be be made generic
-export function loadDeskIcons () {
+export function loadDeskIcons() {
   programs.innerHTML = `
   <div class="desktopProgram" id="memoryGame" data-value="memory-game">
     <img src="./img/potato.png" class="programIcon">

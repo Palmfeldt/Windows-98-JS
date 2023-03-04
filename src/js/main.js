@@ -1,11 +1,11 @@
-import { loadStartMenu, loadDeskIcons, clockWatch } from './modules/startup.js'
+import { loadWindowsBar, loadDeskIcons, clockWatch } from './modules/startup.js'
 import './modules/memory.js'
 import './modules/chat.js'
 import './modules/quiz.js'
 import './modules/recycle.js'
 import './modules/thisComputer.js'
 
-loadStartMenu()
+loadWindowsBar()
 loadDeskIcons()
 
 const clickSound = new Audio('sound/CLICK.WAV')
@@ -15,7 +15,7 @@ document.getElementById('main').addEventListener('dblclick', unhighlight)
 /**
  *
  */
-function unhighlight () {
+function unhighlight() {
   const highlights = document.querySelectorAll('.highlightedProgram')
   if (highlights.length !== 0) {
     highlights.forEach(hightlight => {
@@ -27,7 +27,7 @@ function unhighlight () {
 /**
  *
  */
-function updateTime () {
+function updateTime() {
   clockWatch()
 }
 setInterval(updateTime, 5000)
@@ -62,4 +62,8 @@ programs.forEach(program => {
     runProgram.style.zIndex = 2
     document.querySelector('.mainscreen').appendChild(runProgram)
   })
+})
+
+document.getElementById("menuBox").addEventListener('click', (e) => {
+  document.getElementById("startWindow").classList.toggle("hidden");
 })
