@@ -10,7 +10,7 @@ export function loadWindowsBar() {
   footer.setAttribute('id', 'startMenu')
   // Adds the shadow to the box
   footer.setAttribute('class', 'windows-box-shadow')
-  footer.innerHTML = `<div id="menuBox"><img src="./img/start.png" 
+  footer.innerHTML = `<div id="menuBox" class="boxShadowMenu"><img src="./img/start.png" 
   alt="logo" style="float: left;"><b id="textBetweenLogo">Start</b></div>`
 
   // Needed for the border between the text and image
@@ -37,7 +37,7 @@ export function loadWindowsBar() {
   const startWindow = document.createElement('div')
   startWindow.setAttribute('id', 'startWindow')
   startWindow.setAttribute('class', 'windows-box-shadow hidden')
-  document.getElementById("startMenu").parentNode.insertBefore(startWindow,  document.getElementById("startMenu"))
+  document.getElementById("startMenu").parentNode.insertBefore(startWindow, document.getElementById("startMenu"))
 }
 
 /**

@@ -65,5 +65,7 @@ programs.forEach(program => {
 })
 
 document.getElementById("menuBox").addEventListener('click', (e) => {
+  document.getElementById("menuBox").classList.toggle("boxPressedMenu");
+  document.getElementById("menuBox").classList.toggle("boxShadowMenu");
   document.getElementById("startWindow").classList.toggle("hidden");
 })
