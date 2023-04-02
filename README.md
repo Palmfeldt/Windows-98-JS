@@ -1,4 +1,4 @@
-# Windows 98 Alva Edition - A3 SPA
+# Windows 98 JS Edition
 
 ![Final build](final-build.png)
 
